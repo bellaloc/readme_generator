@@ -49,7 +49,6 @@ const questions = [
   },
 ];
 
-
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
@@ -60,9 +59,9 @@ function writeToFile(fileName, data) {
   });
 }
 
+
 function init() {
   inquirer.prompt(questions).then((answers) => {
-   
     const readmeContent = `
 # ${answers.title}
 
